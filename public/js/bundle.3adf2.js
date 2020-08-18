@@ -32657,7 +32657,7 @@ module.exports = g;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "img/light.343c9.png");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "img/light.c9faf.png");
 
 /***/ }),
 
@@ -32831,4 +32831,4 @@ function RouteApp() {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.34055.js.map
+//# sourceMappingURL=bundle.3adf2.js.map
