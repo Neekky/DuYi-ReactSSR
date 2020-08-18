@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from'./index.css'
-console.log(styles,'哈哈')
+import light from '../../assets/light.png'
+
 export default function () {
     const [number, setNumber] = useState(0);
     return (
@@ -9,6 +10,8 @@ export default function () {
             <button className={styles.beautyBtn} onClick={() => {
                 setNumber(number + 1);
             }}>点击</button>
+            <img style={{width:'300px',height:'300px'}} src={light}></img>
+            <div className={styles.imgBg}></div>
         </div>
     )
 }

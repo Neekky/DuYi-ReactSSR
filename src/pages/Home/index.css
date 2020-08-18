@@ -1,3 +1,11 @@
 .beautyBtn {
     background-color: bisque;
 }
+
+.imgBg {
+    background: url('../../assets/light.png');
+    width: 400px;
+    height: 400px;
+    background-color: #ddd;
+    background-size: 100% 100%;
+}

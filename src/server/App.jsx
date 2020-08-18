@@ -1,6 +1,6 @@
 import React from 'react'
-import Home from '../pages/Home'
+import RouterApp from '../routes/RouteApp'
 
 export default function App() {
-    return <Home />
+    return <RouterApp />
 }
