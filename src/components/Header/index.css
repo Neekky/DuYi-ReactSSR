@@ -1,0 +1,10 @@
+.header {
+    height: 50px;
+    background-color: #54a382;
+}
+
+.header a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #fff;
+}

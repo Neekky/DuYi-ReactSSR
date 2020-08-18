@@ -1,11 +1,11 @@
-import React from 'react'
-import RouterApp from '../routes/RouteApp'
-import { BrowserRouter } from 'react-router-dom'
+import React from "react";
+import { StaticRouter } from "react-router-dom";
+import RouteApp from "@/routes/RouteApp";
 
-export default function App() {
-    return (
-        <BrowserRouter>
-            <RouterApp />
-        </BrowserRouter>
-    )
-}
+export default ({ location, context }) => {
+  return (
+    <StaticRouter location={location} context={context}>
+      <RouteApp />
+    </StaticRouter>
+  );
+};
