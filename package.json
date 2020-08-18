@@ -4,7 +4,10 @@
   "description": "react-ssr courses in DUYI edu cop.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm-run-all --parallel dev:start dev:** ",
+    "dev:start": "nodemon --watch dist --exec node dist/server",
+    "dev:build:server": "webpack --config webpack.server.js",
+    "dev:build:client": "webpack --config webpack.client.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,22 @@
   "bugs": {
     "url": "https://github.com/DuYi-Edu/DuYi-ReactSSR/issues"
   },
-  "homepage": "https://github.com/DuYi-Edu/DuYi-ReactSSR#readme"
+  "homepage": "https://github.com/DuYi-Edu/DuYi-ReactSSR#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.1",
+    "isomorphic-style-loader": "^5.1.0",
+    "mini-css-extract-plugin": "^0.10.0",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.1.1",
+    "webpack-node-externals": "^2.5.1"
+  }
 }
