@@ -1,7 +1,7 @@
 import getScripts from './getScripts';
 import getLinks from './getLinks';
 
-export default function (conponentHTML) {
+export default function (conponentHTML, path, store) {
     const html = `
     <!DOCTYPE html>
     <html lang="en">
@@ -14,6 +14,10 @@ export default function (conponentHTML) {
     <body>
         <div id="root">${conponentHTML}</div>
     </body>
+    <script>
+        window.pageDatas = ${JSON.stringify(store.getState())};
+        window.requestPath = "${path}";
+    </script>
     ${getScripts()}
     </html>
     `

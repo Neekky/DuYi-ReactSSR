@@ -1,17 +1,38 @@
-import React, { useState } from 'react'
-import styles from'./index.css'
+import React from 'react'
+import styles from './index.css'
 import light from '../../assets/light.png'
+import { connect } from 'react-redux'
+import { increase, decrease } from '@/store/actions/counter'
 
-export default function () {
-    const [number, setNumber] = useState(0);
+function Counter({ number, onIncrease, onDecrease }) {
     return (
         <div>
             <h1>{number}</h1>
-            <button className={styles.beautyBtn} onClick={() => {
-                setNumber(number + 1);
-            }}>点击</button>
-            <img style={{width:'300px',height:'300px'}} src={light}></img>
+            <p>
+                <button onClick={onIncrease}>增加</button>
+                <button onClick={onDecrease}>减少</button>
+            </p>
+            <img style={{ width: '300px', height: '300px' }} src={light}></img>
             <div className={styles.imgBg}></div>
         </div>
     )
 }
+
+function mapStateToProps(state) {
+    return {
+        number: state.counter
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        onIncrease() {
+            dispatch(increase());
+        },
+        onDecrease() {
+            dispatch(decrease());
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
