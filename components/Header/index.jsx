@@ -1,12 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import styles from './index.module.css'
 
 export default function Header() {
     const router = useRouter();
     return (
-        <div>
+        <div className={styles.header}>
             <ul>
+                <li>
+                    <Link href="/">
+                        <a><img src="/icon.png" /></a>
+                    </Link>
+                </li>
                 <li>
                     <Link href="/">
                         <a>首页</a>
