@@ -1,10 +1,10 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import Home from "@/pages/Home";
-import Movies from "@/pages/Movies";
-import NotFound from "@/pages/NotFound";
-import Header from "@/components/Header";
-export default function RouteApp() {
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+import Home from '@/pages/Home'
+import Movies from '@/pages/Movies'
+import NotFound from '@/pages/NotFound'
+import Header from '@/components/Header'
+export default function RouteApp () {
   return (
     <div>
       <Header></Header>
@@ -20,5 +20,5 @@ export default function RouteApp() {
         </Switch>
       </div>
     </div>
-  );
+  )
 }
