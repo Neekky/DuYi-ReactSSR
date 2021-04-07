@@ -8,7 +8,7 @@
     "dev:start": "nodemon --watch dist --exec node dist/server",
     "dev:build:server": "webpack --config webpack.server.js",
     "dev:build:client": "webpack --config webpack.client.js",
-    "test": "echo \"Error: no test scripts\" && exit 1 "
+    "precommit": "echo \"Error: no test scripts\" && exit 1 "
   },
   "repository": {
     "type": "git",
@@ -45,7 +45,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run precommit"
     }
   }
 }
