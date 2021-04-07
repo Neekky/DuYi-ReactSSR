@@ -1,5 +1,5 @@
-import getScripts from "./getScripts";
-import getLinks from "./getLinks";
+import getScripts from './getScripts'
+import getLinks from './getLinks'
 
 export default componentHTML => {
   const html = `
@@ -16,6 +16,6 @@ export default componentHTML => {
     ${getScripts()}
   </body>
   </html>
-  `;
-  return html;
-};
+  `
+  return html
+}
